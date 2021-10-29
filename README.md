@@ -1,5 +1,5 @@
 # Udemy-TheComplete2021WebDevelopmentBootcamp
-A bootcamp where I'll learn skills of a full-stack web developer. Wich includes HTML, CSS, Javascript, Node, React, MongoDB and more! Through the course I'll see those languages, frameworks, tools and technologie:
+  Through the course I'll see those languages, frameworks, tools and technologie:
 
 - HTML 5
 - CSS 3
