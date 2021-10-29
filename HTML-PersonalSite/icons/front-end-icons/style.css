@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?dcto9m');
+  src:  url('fonts/icomoon.eot?dcto9m#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?dcto9m') format('truetype'),
+    url('fonts/icomoon.woff?dcto9m') format('woff'),
+    url('fonts/icomoon.svg?dcto9m#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fiap:before {
+  content: "\e90b";
+  color: #f4505c;
+}
+.icon-linkedin:before {
+  content: "\e907";
+  color: #0077b5;
+}
+.icon-github:before {
+  content: "\e908";
+}
+.icon-react:before {
+  content: "\e909";
+  color: #61dafb;
+}
+.icon-react-native:before {
+  content: "\e90a";
+}
+.icon-flutter:before {
+  content: "\e900";
+  color: #02569b;
+}
+.icon-node-dot-js:before {
+  content: "\e901";
+  color: #393;
+}
+.icon-react2:before {
+  content: "\e902";
+  color: #61dafb;
+}
+.icon-bootstrap:before {
+  content: "\e903";
+  color: #563d7c;
+}
+.icon-javascript:before {
+  content: "\e904";
+  color: #f7df1e;
+}
+.icon-css3:before {
+  content: "\e905";
+  color: #1572b6;
+}
+.icon-html5:before {
+  content: "\e906";
+  color: #e34f26;
+}
+.icon-github1:before {
+  content: "\eab0";
+}
