@@ -2,7 +2,8 @@ const TIME_ANIMATE_BUTTON = 100;
 const TIME_TO_ANIMATION = 200;
 const TIME_TO_NEW_SEQUENCE = 1000;
 const TIME_TO_SHOW_GAME_OVER = 200;
-const GAME_OVER_TEXT = "Game Over, Aperte qualquer tecla para reiniciar";
+const GAME_OVER_TEXT = "Game Over";
+const RESTART_TEXT = "Clique aqui para Reiniciar";
 
 const buttonColours = ["red", "blue", "green", "yellow"];
 let gamePattern = [];
@@ -22,6 +23,10 @@ const gameDificulty = () => {
   }
 };
 
+const buttonHider = () => {
+  $("#game-start").toggle();
+};
+
 const nextLevel = () => {
   // Contador do Level
   level++;
@@ -37,13 +42,15 @@ const nextSequence = () => {
   // Push para a pontuação atual do jogo
   gamePattern.push(randomChosenColour);
   userClickedPattern = [];
+  console.log(gamePattern);
 };
 // Inicia o jogo
-$(document).on("keypress", function () {
+$("#game-start").on("click", function () {
   // Quando uma tecla do teclado é pressionada, a variável é alterada para true e inicia-se o if
   if (!started) {
     nextSequence();
     showLastSequence();
+    buttonHider();
     started = true;
   }
 });
@@ -64,6 +71,7 @@ const startOver = () => {
   level = 0;
   gamePattern = [];
   started = false;
+  timeBetweenSteps = 1000;
 };
 
 // Função para checar o resultado
@@ -82,6 +90,7 @@ const checkAnswer = (currentLevel) => {
       }, TIME_TO_SHOW_GAME_OVER);
       playSong("wrong"); // Executa o som caso a sequencia esteja errada
       $("#level-title").text(GAME_OVER_TEXT);
+      $("#game-start").text(RESTART_TEXT).toggle();
       startOver();
     }
   }

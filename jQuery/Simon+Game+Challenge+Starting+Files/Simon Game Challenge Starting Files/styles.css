@@ -5,24 +5,34 @@ body {
 
 #level-title {
   font-family: "Press Start 2P", cursive;
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 5%;
   color: #fef2bf;
 }
 
+#game-start {
+  font-family: "Press Start 2P", cursive;
+  font-size: 2rem;
+  margin: 5%;
+  color: #fef2bf;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
 .container {
-  display: block;
-  width: 50%;
-  margin: auto;
+  grid: 175px 175px/ 1fr 1fr;
 }
 
 .btn {
-  margin: 25px;
-  display: inline-block;
-  height: 200px;
-  width: 200px;
+  margin: 10px;
   border: 10px solid black;
   border-radius: 20%;
+  cursor: pointer;
 }
 
 .game-over {
@@ -32,25 +42,32 @@ body {
 
 .red {
   background-color: red;
-  cursor: pointer;
 }
 
 .green {
   background-color: green;
-  cursor: pointer;
 }
 
 .blue {
   background-color: blue;
-  cursor: pointer;
 }
 
 .yellow {
   background-color: yellow;
-  cursor: pointer;
 }
 
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+@media screen and (max-width: 1200px) {
+  .grid {
+    display: grid;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  .container {
+    grid: 300px 300px/ 1fr 1fr;
+  }
 }
